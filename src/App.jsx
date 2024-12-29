@@ -583,7 +583,7 @@ const blogPosts = [
 
         [MONTREAL_IMAGES]
 
-        FINAL WORDS: The journey of Grade 12 is a rollercoaster, but it's one you'll never forget. I wish you all the best of luck!
+        The journey of Grade 12 is a rollercoaster, but it's one you'll never forget. I wish you all the best of luck!
       `
     }
   }
