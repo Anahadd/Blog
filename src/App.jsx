@@ -15,9 +15,9 @@ import montreal6 from './assets/IMG_0754.jpg'
 import montreal7 from './assets/IMG_0757.jpeg'
 import montreal8 from './assets/IMG_5944.jpg'
 import uni3 from './assets/meme.jpg';
-import uni1 from './assets/IMG_7962.jpg';
-import uni2 from './assets/IMG_7963.jpg';
-import uni4 from './assets/IMG_7964.jpg';
+import uni1 from './assets/a.jpg';
+import uni2 from './assets/b.jpg';
+import uni4 from './assets/c.jpg';
 
 
 
@@ -455,22 +455,35 @@ const HighlightBox = styled.div`
 
 const blogPosts = [
   {
-    id: 1,
-    title: "Winter Break",
-    description: "OG Fortnite. Sleep. Chill. Rediscovering the simple joys of gaming and relaxation during the much-needed winter break.",
-    image: winterBreak,
-    date: "Last Updated: Dec 28, 2023",
-    tags: ["Having", "Fun"],
-    slug: "blog3",
-    content: {
-      intro: "OG Fortnite. Sleep. Chill. A much-needed break from the academic grind, returning to the simple joys of gaming and relaxation.",
-      topics: [
-        "Rediscovering old games",
-        "Quality time with friends",
-        "Recharging for next semester",
-        "Finding the perfect balance"
-      ]
-    }
+      id: 1,
+      title: "Winter Break",
+      description: "OG Fortnite. Sleep. Chill. Rediscovering the simple joys of gaming and relaxation during the much-needed winter break.",
+      image: winterBreak,
+      date: "Last Updated: Dec 28, 2023",
+      tags: ["Having", "Fun"],
+      slug: "blog3",
+      content: {
+        intro: "OG Fortnite. Sleep. Chill. A much-needed break from the academic grind, returning to the simple joys of gaming and relaxation.",
+        fullContent: true,
+        body: `
+          Another day, another victory for the OG taking down the sweats. This winter break was a much-needed rest. I watched a ton of shows (shoutout to *Suits*), played a bunch of games, and stayed up ridiculously late. In fact, as I’m writing this, it’s 3 AM. It’s pretty wild because I feel like the past four months didn’t even happen now that I’m chilling during the break. That’s both good and bad. Good because I get to recharge, bad because I forgot everything I learned—just kidding. 😉
+  
+
+          PRODUCTIVE STUFF
+
+          I spent most of this break working on productive stuff like making my personal website, creating this blog, and updating my LinkedIn/resume in preparation for 1B, which is when the job search starts. I’m making my life easier by doing all of this now, and I highly recommend this strategy to any Stream 8 student at Waterloo. I’ve also been grinding LeetCode to prepare for job interviews, and fingers crossed I actually land something considering today’s job market. 🤞
+  
+
+          SKATING
+
+          In between all the hustle, I did some skating too—even though I’m still learning how to skate. Gotta say, falling is part of the charm, right? Oh, and I also bought a PS5! It’s been awesome catching up on all the games I missed. I’m hoping GTA 6 comes out sooner rather than later so I can give it a test run on my PS5 before co-op.
+  
+
+          FINAL WORDS
+
+          I’m feeling much better prepared for 1B than I was for 1A. Let’s just hope I pass. Stay tuned for the next set of blogs because I’ve kept this one short—but you never know, the fun stuff is just getting started!
+        `
+      }
   },
   {
     id: 2,
@@ -603,6 +616,9 @@ function BlogPost() {
             if (section.trim().startsWith('UNIVERSITY APPLICATIONS') ||
                 section.trim().startsWith('BALANCING ACADEMICS') ||
                 section.trim().startsWith('SUMMER BREAK') ||
+                section.trim().startsWith('PRODUCTIVE STUFF') ||
+                section.trim().startsWith('SKATING') ||
+                section.trim().startsWith('FINAL WORDS') ||
                 section.trim().startsWith('That\'s my general overview of 1A')) {
               return (
                 <BlogSection key={index}>
