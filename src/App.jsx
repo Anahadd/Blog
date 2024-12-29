@@ -3,6 +3,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { BrowserRouter as Router, Route, Routes, Link, useParams } from 'react-router-dom'
+import gradImg from './assets/grad.jpg'
+import waterloo from './assets/waterloo.jpg'
+import winterBreak from './assets/winter-break.jpg'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -63,6 +66,11 @@ const BlogTitle = styled.h1`
   margin-bottom: 4rem;
   color: #4ade80;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
 `
 
 const BlogSubtitle = styled.h2`
@@ -71,6 +79,11 @@ const BlogSubtitle = styled.h2`
   margin-bottom: 3rem;
   color: #ffffff;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
 `
 
 const BlogGrid = styled.div`
@@ -80,6 +93,10 @@ const BlogGrid = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -106,6 +123,10 @@ const Card = styled(motion.div)`
     border-color: #262626;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
                 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
   }
 `
 
@@ -179,6 +200,7 @@ const CardFooter = styled.div`
 const TagContainer = styled.div`
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 `
 
 const Tag = styled.span`
@@ -242,6 +264,12 @@ const FooterContent = styled.div`
 const FooterLinks = styled.div`
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 `
 
 const FooterLink = styled.a`
@@ -271,12 +299,20 @@ const BlogPostContainer = styled.div`
   background-color: #000000;
   color: #ffffff;
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `
 
 const BlogPostTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `
 
 const BlogPostContent = styled.div`
@@ -299,6 +335,10 @@ const BlogPostContent = styled.div`
       margin-bottom: 0.5rem;
     }
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `
 
 const blogPosts = [
@@ -306,7 +346,7 @@ const blogPosts = [
     id: 1,
     title: "Winter Break",
     description: "OG Fortnite. Sleep. Chill. Rediscovering the simple joys of gaming and relaxation during the much-needed winter break.",
-    image: "https://via.placeholder.com/600x400",
+    image: winterBreak,
     date: "Last Updated: Dec 28, 2023",
     tags: ["Having", "Fun"],
     slug: "blog3",
@@ -324,7 +364,7 @@ const blogPosts = [
     id: 2,
     title: "First Semester of University",
     description: "Here's what to expect in Waterloo Computer Engineering 1A - the raw, unfiltered truth. From intense academics to newfound independence, this is the real first-year experience.",
-    image: "https://via.placeholder.com/600x400",
+    image: waterloo,
     date: "Last Updated: Dec 28, 2023",
     tags: ["Uni", "Social Life"],
     slug: "blog2",
@@ -342,7 +382,7 @@ const blogPosts = [
     id: 3,
     title: "The Journey of Grade 12",
     description: "The year that everyone locks in. The highs, the lows, everything in between. From university applications to final exams, this is the story of the most pivotal year.",
-    image: "https://via.placeholder.com/600x400",
+    image: gradImg,
     date: "Last Updated: Dec 28, 2023",
     tags: ["School", "Grades"],
     slug: "blog1",
