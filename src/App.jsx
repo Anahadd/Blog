@@ -6,6 +6,14 @@ import { BrowserRouter as Router, Route, Routes, Link, useParams } from 'react-r
 import gradImg from './assets/grad.jpg'
 import waterloo from './assets/waterloo.jpg'
 import winterBreak from './assets/winter-break.jpg'
+import montreal1 from './assets/IMG_0663.jpg'
+import montreal2 from './assets/IMG_0772.jpeg'
+import montreal3 from './assets/IMG_5933.jpg'
+import montreal4 from './assets/IMG_5966.jpg'
+import montreal5 from './assets/IMG_0721.jpeg'
+import montreal6 from './assets/IMG_0754.jpg'
+import montreal7 from './assets/IMG_0757.jpeg'
+import montreal8 from './assets/IMG_5944.jpg'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -341,6 +349,70 @@ const BlogPostContent = styled.div`
   }
 `
 
+const BlogSection = styled.section`
+  margin-bottom: 2rem;
+`
+
+const BlogH2 = styled.h2`
+  font-size: 1.8rem;
+  color: #4ade80;
+  margin: 2rem 0 1rem;
+`
+
+const BlogH3 = styled.h3`
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 1.5rem 0 1rem;
+`
+
+const BlogParagraph = styled.p`
+  color: #a3a3a3;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+`
+
+const BlogList = styled.ul`
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  color: #a3a3a3;
+  
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+`
+
+const GradeTable = styled.div`
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 0.5rem;
+  
+  p {
+    margin: 0.5rem 0;
+    color: #a3a3a3;
+  }
+`
+
+const ImageGallery = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const GalleryImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+`
+
 const blogPosts = [
   {
     id: 1,
@@ -387,13 +459,56 @@ const blogPosts = [
     tags: ["School", "Grades"],
     slug: "blog1",
     content: {
-      intro: "The year that everyone locks in. The highs, the lows, everything in between. A personal reflection on the most transformative year of high school.",
-      topics: [
-        "The pressure of university applications",
-        "Balancing academics and social life",
-        "Making lasting memories",
-        "Preparing for the next chapter"
-      ]
+      intro: "The year that everyone locks in. The highs, the lows, and everything in between. A personal reflection on the most transformative year of high school.",
+      fullContent: true,
+      body: `
+        Alright. It's finally the big leagues, the peak year of high school known as the infamous senior year. Honestly, this year came by faster than I expected; it genuinely felt like I was in Grade 9 just a couple of days ago. The big subject of this year is university applications. Almost everyone begins setting up their account on OUAC at the start of the year and *starting* their applications as soon as they open (definitely didn't follow this one). Here's some advice from someone who thinks they've played the admissions game quite well (except for CS at Waterloo 😭). This advice is tailored specifically for Waterloo but can also be applied to UofT.
+
+        UNIVERSITY APPLICATIONS
+        Now, I won't lie to you. Grades matter—but only to a certain threshold, at least for the schools I applied to, which were primarily Waterloo and UofT. I also applied to some backup schools. Your grades don't necessarily have to be stellar for these schools, but you do need strong extracurriculars. Having a 90+ average is good enough depending on the program you're applying to (obviously, Tier 1 programs might require higher averages). Waterloo, in particular, calculates this through a combination of GPA - Adjustment Factor + AIF/Video. They're looking for well-rounded applicants who have not just good grades but also experience in clubs, work, or hackathons.
+
+        Personally, I had a 98.3% average for engineering and a 98.6% average for CS. However, I didn't have much experience in hackathons or competitions, which is why I believe balance is more important than sky-high grades. I know friends with much lower averages (e.g., low 90s) but with impressive extracurriculars who got into Waterloo. For hackathons, I recommend attending hackathons like Hack the North, Hack the Valley, and Hack Western (just look at https://mlh.io/ for a list of hackathons).
+
+        Here's a general list of extracurriculars you should consider in high school:
+        - Co-lead/lead a club
+        - Attend hackathons
+        - Participate in competitions (e.g., DECA, HOSA, CSMC, etc.)
+        - Volunteer with non-profits
+        - Write research papers
+        - Be competitive in a sport
+
+        These activities help boost your AIF score, which is out of 5 (last I checked). There's also a video interview component, but during our admissions round, Dr. William Bishop, the head of admissions, mentioned that they didn't have time to review interviews for early admissions. My admission was based solely on grades and AIF. Admissions ultimately come down to character, fit, and employability. Do your research about the school; I believe Waterloo has updated the AIF process, which might make it slightly tougher.
+
+        I got in during the early round, so they didn't see my semester 2 grades. This saved me since my English mark was slightly lower than in Grade 11, and I started slacking off significantly.
+
+        BALANCING ACADEMICS AND SOCIAL LIFE IN GRADE 12
+        In Grade 12, academics are on everyone's mind since your marks matter. Universities typically see your final grades for semester 1 and midterm grades for semester 2. Academically, I recommend attending class (I skipped about 30% of classes in Grade 12—insane, I know), keeping up with homework, and studying for tests religiously. High school exams are MUCH easier than university midterms/exams and often reuse test or homework questions.
+
+        Here's my admitted average for clarity. Keep in mind I attended an AP school in Brampton, which had an average adjusment factor (probably going to be higher now considering how our grades are looking). This includes my Grade 11 marks since I got in during the early round and they didn't have access to my semester 2 grades:
+        - Grade 11 Physics: 96%
+        - Grade 12 AP Chemistry: 100%
+        - Grade 12 AP Calculus and Vectors: 100%
+        - Grade 12 AP Advanced Functions: 96%
+        - Grade 12 English: 98%
+        - Grade 11 Accounting: 100%
+
+        This average was for engineering. I highly recommend taking bird courses (e.g. Accounting, Business, etc.) as they're easier than regular courses and can help boost your average. Universities don't care about your bird courses, so it's a good way to boost your average without much effort.
+
+        Tips for getting high grades:
+        1. Stay consistent with studying and assignments
+        2. Ask teachers for feedback to improve
+        3. Review past tests and exams for patterns
+        4. Use reliable study resources and form study groups
+
+        Honestly, social life was a bit dim during the first semester of Grade 12. After semester 2 midterms, honestly, no one showed up to class. I spent most days playing basketball or soccer with friends. At one point, I thought I might get kicked out because of my attendance and had to confirm with my principal that skipping this much wouldn't be an issue. Despite everything, the latter part of Grade 12 is all about fun. It's heartwarming to see everyone, despite their differences, come together to enjoy the last few months of high school.
+
+        SUMMER BREAK
+        This summer was the most chill, anxious, and fun summer I've had. It was chill because we visited so many cool places, anxious because I didn't know what to expect from university, and fun because I went on a grad trip to Montreal with the boys. Here are some highlights:
+
+        [MONTREAL_IMAGES]
+
+        The journey of Grade 12 is a rollercoaster, but it's one you'll never forget. I wish you all the best of luck!
+      `
     }
   }
 ]
@@ -411,21 +526,96 @@ function BlogPost() {
     )
   }
 
+  const sections = post.content.body?.split('\n\n').filter(Boolean) || []
+
   return (
     <BlogPostContainer>
       <BlogPostContent>
         <BackLink to="/">← Back to Blog</BackLink>
         <BlogPostTitle>{post.title}</BlogPostTitle>
-        <div className="space-y-4">
-          <p>{post.content.intro}</p>
-          <p>What we'll cover:</p>
-          <ul>
-            {post.content.topics.map((topic, index) => (
-              <li key={index}>{topic}</li>
-            ))}
-          </ul>
-          <p>Full post coming soon!</p>
-        </div>
+        <BlogParagraph>{post.content.intro}</BlogParagraph>
+        
+        {post.content.fullContent ? (
+          sections.map((section, index) => {
+            if (section.trim().startsWith('UNIVERSITY APPLICATIONS') ||
+                section.trim().startsWith('BALANCING ACADEMICS') ||
+                section.trim().startsWith('SUMMER BREAK')) {
+              return (
+                <BlogSection key={index}>
+                  <BlogH2>{section.split('\n')[0]}</BlogH2>
+                  <BlogParagraph>{section.split('\n').slice(1).join('\n')}</BlogParagraph>
+                </BlogSection>
+              )
+            }
+            
+            if (section.includes('Tips for getting high grades:')) {
+              return (
+                <BlogSection key={index}>
+                  <BlogH3>Tips for getting high grades:</BlogH3>
+                  <BlogList>
+                    {section.split('\n').slice(1).map((tip, i) => (
+                      <li key={i}>{tip.replace(/^\d\.\s/, '')}</li>
+                    ))}
+                  </BlogList>
+                </BlogSection>
+              )
+            }
+            
+            if (section.includes("Here's my admitted average")) {
+              return (
+                <GradeTable key={index}>
+                  {section.split('\n').map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                </GradeTable>
+              )
+            }
+            
+            if (section.startsWith("Here's a general list")) {
+              return (
+                <BlogSection key={index}>
+                  <BlogParagraph>{section.split('\n')[0]}</BlogParagraph>
+                  <BlogList>
+                    {section.split('\n').slice(1).map((item, i) => (
+                      <li key={i}>{item.replace(/^-\s/, '')}</li>
+                    ))}
+                  </BlogList>
+                </BlogSection>
+              )
+            }
+
+            if (section.includes('[MONTREAL_IMAGES]')) {
+              return (
+                <BlogSection key={index}>
+                  <BlogParagraph>{section.split('[MONTREAL_IMAGES]')[0]}</BlogParagraph>
+                  <ImageGallery>
+                    <GalleryImage src={montreal1} alt="Montreal trip highlight 1" />
+                    <GalleryImage src={montreal2} alt="Montreal trip highlight 2" />
+                    <GalleryImage src={montreal3} alt="Montreal trip highlight 3" />
+                    <GalleryImage src={montreal4} alt="Montreal trip highlight 4" />
+                    <GalleryImage src={montreal5} alt="Montreal trip highlight 4" />
+                    <GalleryImage src={montreal6} alt="Montreal trip highlight 4" />
+                    <GalleryImage src={montreal7} alt="Montreal trip highlight 4" />
+                    <GalleryImage src={montreal8} alt="Montreal trip highlight 4" />
+                  </ImageGallery>
+                  <BlogParagraph>{section.split('[MONTREAL_IMAGES]')[1]}</BlogParagraph>
+                </BlogSection>
+              )
+            }
+            
+            return <BlogParagraph key={index}>{section}</BlogParagraph>
+          })
+        ) : (
+          <>
+            <p>What we'll cover:</p>
+            <ul>
+              {post.content.topics.map((topic, index) => (
+                <li key={index}>{topic}</li>
+              ))}
+            </ul>
+            <p>Full post coming soon!</p>
+          </>
+        )}
       </BlogPostContent>
     </BlogPostContainer>
   )
