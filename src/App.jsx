@@ -14,6 +14,12 @@ import montreal5 from './assets/IMG_0721.jpeg'
 import montreal6 from './assets/IMG_0754.jpg'
 import montreal7 from './assets/IMG_0757.jpeg'
 import montreal8 from './assets/IMG_5944.jpg'
+import uni3 from './assets/meme.jpg';
+import uni1 from './assets/IMG_7962.jpg';
+import uni2 from './assets/IMG_7963.jpg';
+import uni4 from './assets/IMG_7964.jpg';
+
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -126,15 +132,13 @@ const Card = styled(motion.div)`
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
-    transform: translateY(-0.25rem);
-    border-color: #262626;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 768px) {
-    max-width: 100%;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-0.25rem);
+      border-color: #262626;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                  0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
   }
 `
 
@@ -151,8 +155,10 @@ const Image = styled.img`
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${Card}:hover & {
-    transform: scale(1.1);
+  @media (hover: hover) and (pointer: fine) {
+    ${Card}:hover & {
+      transform: scale(1.1);
+    }
   }
 `
 
@@ -163,8 +169,10 @@ const ImageOverlay = styled.div`
   opacity: 0;
   transition: opacity 0.3s;
 
-  ${Card}:hover & {
-    opacity: 1;
+  @media (hover: hover) and (pointer: fine) {
+    ${Card}:hover & {
+      opacity: 1;
+    }
   }
 `
 
@@ -180,8 +188,10 @@ const CardTitle = styled.h3`
   color: #ffffff;
   transition: color 0.3s;
 
-  ${Card}:hover & {
-    color: #4ade80;
+  @media (hover: hover) and (pointer: fine) {
+    ${Card}:hover & {
+      color: #4ade80;
+    }
   }
 `
 
@@ -220,9 +230,11 @@ const Tag = styled.span`
   border-radius: 9999px;
   transition: all 0.3s;
 
-  ${Card}:hover & {
-    background-color: rgba(74, 222, 128, 0.1);
-    color: #4ade80;
+  @media (hover: hover) and (pointer: fine) {
+    ${Card}:hover & {
+      background-color: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+    }
   }
 `
 
@@ -238,11 +250,13 @@ const CardDate = styled.span`
     transition: transform 0.3s;
   }
 
-  ${Card}:hover & {
-    color: #4ade80;
+  @media (hover: hover) and (pointer: fine) {
+    ${Card}:hover & {
+      color: #4ade80;
 
-    svg {
-      transform: translateX(0.25rem);
+      svg {
+        transform: translateX(0.25rem);
+      }
     }
   }
 `
@@ -326,10 +340,14 @@ const BlogPostTitle = styled.h1`
 const BlogPostContent = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  
+  background-color: #111111;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   p {
     color: #a3a3a3;
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
   }
 
@@ -338,7 +356,7 @@ const BlogPostContent = styled.div`
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
     color: #a3a3a3;
-    
+
     li {
       margin-bottom: 0.5rem;
     }
@@ -346,6 +364,7 @@ const BlogPostContent = styled.div`
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
+    padding: 1rem;
   }
 `
 
@@ -354,15 +373,20 @@ const BlogSection = styled.section`
 `
 
 const BlogH2 = styled.h2`
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #4ade80;
-  margin: 2rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
+  border-bottom: 2px solid #4ade80;
+  padding-bottom: 0.5rem;
 `
 
 const BlogH3 = styled.h3`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #ffffff;
-  margin: 1.5rem 0 1rem;
+  margin: 2rem 0 1rem;
+  background-color: rgba(74, 222, 128, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 `
 
 const BlogParagraph = styled.p`
@@ -376,7 +400,7 @@ const BlogList = styled.ul`
   padding-left: 1.5rem;
   margin: 1rem 0 1.5rem;
   color: #a3a3a3;
-  
+
   li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
@@ -388,7 +412,7 @@ const GradeTable = styled.div`
   padding: 1rem;
   background: rgba(74, 222, 128, 0.1);
   border-radius: 0.5rem;
-  
+
   p {
     margin: 0.5rem 0;
     color: #a3a3a3;
@@ -411,6 +435,22 @@ const GalleryImage = styled.img`
   height: auto;
   border-radius: 0.5rem;
   object-fit: cover;
+`
+
+const CourseDescription = styled.div`
+  background-color: #1a1a1a;
+  border-left: 4px solid #4ade80;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+`
+
+const HighlightBox = styled.div`
+  background-color: rgba(74, 222, 128, 0.1);
+  border: 1px solid #4ade80;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
 `
 
 const blogPosts = [
@@ -442,12 +482,35 @@ const blogPosts = [
     slug: "blog2",
     content: {
       intro: "Here's what to expect in Waterloo Computer Engineering 1A - the unfiltered truth. From intense coursework to newfound independence, this is the real first-year experience.",
-      topics: [
-        "Adjusting to university life",
-        "Managing the academic workload",
-        "Building new friendships",
-        "Surviving your first midterms"
-      ]
+      fullContent: true,
+      body: `
+        Now 1A is finally done, and I can give you tips and tricks. To be frank, I’m still learning how to adapt to university life since it’s only been four months, and 1A is usually one of the lighter semesters. Here’s a breakdown of the courses I took:
+
+        ENGINEERING PROFESSION (ECE 190)
+        This course was straightforward. We had a cheat sheet for both the midterm and final. Honestly, just write down everything from the slides, and you’ll be fine. I recommend attending lectures and taking notes since it’s easier than cramming the cheat sheet the night before (which I did, and it took me five hours to write everything—my hand cramped like crazy). Also, make sure to put your name on the attendance photos for deliverables.
+
+        PROJECT STUDIO (ECE 198)
+        This is a project course where you use two STM32 boards to create something. Tip: For meetings, copy-paste the rubric and follow each part meticulously. The course depends heavily on your TA—some are very nice, while others can be challenging. Start your project early; my group crammed everything three days before the deadline.
+
+        ENGLISH (ENGL 192)
+        This course can either be a communication or English credit. I got an English credit and wasn’t thrilled. Our focus was on AI, and assignments included presentations, memos, and reading circles. There were no exams, but the workload heavily depends on your professor.
+
+        CALCULUS 1 (MATH 117)
+        A standard calculus class. The first half is a review, and the second half focuses on integration methods. Do the problem sets and old exams from EngSoc. The final was slightly harder than the midterm but manageable.
+
+        FUNDAMENTALS OF PROGRAMMING (ECE 150)
+        If you’ve programmed before, this course will feel like a review. Otherwise, practice algorithms and start leetcoding. The midterm had a 35% fail rate, but the final was easier. Attend lectures or watch Prof. Douglas Harder’s YouTube series.
+
+        LINEAR ALGEBRA (MATH 115)
+        This course has been simplified over the years. While theory-heavy, you don’t need to know much abstract theory to do well. Use the textbook and study the basics.
+
+        PHYSICS (ECE 105)
+        This was the toughest course. My professor wasn’t great, so I attended lectures from another cohort. For the midterm, spam old exams—they’re often reused. The final, however, was entirely new, which made it challenging. You need at least 50% on the final to pass the course, even if your overall mark is above 50%.
+
+        That’s my general overview of 1A. It was a chill term overall. Make friends, go out, and join a design team. Everything will work out in the end.
+
+        [UNI_IMAGES]
+      `
     }
   },
   {
@@ -507,7 +570,7 @@ const blogPosts = [
 
         [MONTREAL_IMAGES]
 
-        The journey of Grade 12 is a rollercoaster, but it's one you'll never forget. I wish you all the best of luck!
+        FINAL WORDS: The journey of Grade 12 is a rollercoaster, but it's one you'll never forget. I wish you all the best of luck!
       `
     }
   }
@@ -516,7 +579,7 @@ const blogPosts = [
 function BlogPost() {
   const { slug } = useParams()
   const post = blogPosts.find(post => post.slug === slug)
-  
+
   if (!post) {
     return (
       <BlogPostContainer>
@@ -534,12 +597,13 @@ function BlogPost() {
         <BackLink to="/">← Back to Blog</BackLink>
         <BlogPostTitle>{post.title}</BlogPostTitle>
         <BlogParagraph>{post.content.intro}</BlogParagraph>
-        
+
         {post.content.fullContent ? (
           sections.map((section, index) => {
             if (section.trim().startsWith('UNIVERSITY APPLICATIONS') ||
                 section.trim().startsWith('BALANCING ACADEMICS') ||
-                section.trim().startsWith('SUMMER BREAK')) {
+                section.trim().startsWith('SUMMER BREAK') ||
+                section.trim().startsWith('That\'s my general overview of 1A')) {
               return (
                 <BlogSection key={index}>
                   <BlogH2>{section.split('\n')[0]}</BlogH2>
@@ -547,7 +611,7 @@ function BlogPost() {
                 </BlogSection>
               )
             }
-            
+
             if (section.includes('Tips for getting high grades:')) {
               return (
                 <BlogSection key={index}>
@@ -560,7 +624,7 @@ function BlogPost() {
                 </BlogSection>
               )
             }
-            
+
             if (section.includes("Here's my admitted average")) {
               return (
                 <GradeTable key={index}>
@@ -570,7 +634,7 @@ function BlogPost() {
                 </GradeTable>
               )
             }
-            
+
             if (section.startsWith("Here's a general list")) {
               return (
                 <BlogSection key={index}>
@@ -593,16 +657,44 @@ function BlogPost() {
                     <GalleryImage src={montreal2} alt="Montreal trip highlight 2" />
                     <GalleryImage src={montreal3} alt="Montreal trip highlight 3" />
                     <GalleryImage src={montreal4} alt="Montreal trip highlight 4" />
-                    <GalleryImage src={montreal5} alt="Montreal trip highlight 4" />
-                    <GalleryImage src={montreal6} alt="Montreal trip highlight 4" />
-                    <GalleryImage src={montreal7} alt="Montreal trip highlight 4" />
-                    <GalleryImage src={montreal8} alt="Montreal trip highlight 4" />
+                    <GalleryImage src={montreal5} alt="Montreal trip highlight 5" />
+                    <GalleryImage src={montreal6} alt="Montreal trip highlight 6" />
+                    <GalleryImage src={montreal7} alt="Montreal trip highlight 7" />
+                    <GalleryImage src={montreal8} alt="Montreal trip highlight 8" />
                   </ImageGallery>
                   <BlogParagraph>{section.split('[MONTREAL_IMAGES]')[1]}</BlogParagraph>
                 </BlogSection>
               )
             }
-            
+
+            if (section.includes('[UNI_IMAGES]')) {
+              return (
+                <BlogSection key={index}>
+                  <BlogParagraph>{section.split('[UNI_IMAGES]')[0]}</BlogParagraph>
+                  <ImageGallery>
+                    <GalleryImage src={uni1} alt="University experience 1" />
+                    <GalleryImage src={uni2} alt="University experience 2" />
+                    <GalleryImage src={uni3} alt="University experience 3" />
+                    <GalleryImage src={uni4} alt="University experience 4" />
+                  </ImageGallery>
+                  <BlogParagraph>{section.split('[UNI_IMAGES]')[1]}</BlogParagraph>
+                </BlogSection>
+              )
+            }
+            if (section.trim().startsWith('ENGINEERING PROFESSION') ||
+                section.trim().startsWith('PROJECT STUDIO') ||
+                section.trim().startsWith('ENGLISH') ||
+                section.trim().startsWith('CALCULUS 1') ||
+                section.trim().startsWith('FUNDAMENTALS OF PROGRAMMING') ||
+                section.trim().startsWith('LINEAR ALGEBRA') ||
+                section.trim().startsWith('PHYSICS')) {
+              return (
+                <CourseDescription key={index}>
+                  <BlogH3>{section.split('\n')[0]}</BlogH3>
+                  <BlogParagraph>{section.split('\n').slice(1).join('\n')}</BlogParagraph>
+                </CourseDescription>
+              )
+            }
             return <BlogParagraph key={index}>{section}</BlogParagraph>
           })
         ) : (
