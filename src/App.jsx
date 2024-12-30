@@ -481,7 +481,7 @@ const blogPosts = [
 
           FINAL WORDS
 
-          I’m feeling much better prepared for 1B than I was for 1A. Let’s just hope I pass. Stay tuned for the next set of blogs because I’ve kept this one short—but you never know, the fun stuff is just getting started!
+          I’m feeling much better prepared for 1B than I was for 1A. Let’s just hope I pass. Stay tuned for the next set of blogs because I’ve kept this one short—but you never know, the fun stuff is just getting started! I plan on attending more hackathons and events this next semester - more specifically, I will be attending DeltaHacks, Hackville, and QHacks this next semester.
         `
       }
   },
@@ -541,7 +541,7 @@ const blogPosts = [
         Alright. It's finally the big leagues, the peak year of high school known as the infamous senior year. Honestly, this year came by faster than I expected; it genuinely felt like I was in Grade 9 just a couple of days ago. The big subject of this year is university applications. Almost everyone begins setting up their account on OUAC at the start of the year and *starting* their applications as soon as they open (definitely didn't follow this one). Here's some advice from someone who thinks they've played the admissions game quite well (except for CS at Waterloo 😭). This advice is tailored specifically for Waterloo but can also be applied to UofT.
 
         UNIVERSITY APPLICATIONS
-        Now, I won't lie to you. Grades matter—but only to a certain threshold, at least for the schools I applied to, which were primarily Waterloo and UofT. I also applied to some backup schools. Your grades don't necessarily have to be stellar for these schools, but you do need strong extracurriculars. Having a 90+ average is good enough depending on the program you're applying to (obviously, Tier 1 programs might require higher averages). Waterloo, in particular, calculates this through a combination of GPA - Adjustment Factor + AIF/Video. They're looking for well-rounded applicants who have not just good grades but also experience in clubs, work, or hackathons.
+        Now, I won't lie to you. Grades matter—but only to a certain threshold, at least for the schools I applied to, which were primarily Waterloo and UofT. I also applied to some safety schools. Your grades don't necessarily have to be stellar for these schools, but you do need strong extracurriculars. Having a 90+ average is good enough depending on the program you're applying to (obviously, Tier 1 programs might require higher averages). Waterloo, in particular, calculates this through a combination of GPA - Adjustment Factor + AIF/Video. They're looking for well-rounded applicants who have not just good grades but also meaningful experience in clubs, work, or hackathons.
 
         Personally, I had a 98.3% average for engineering and a 98.6% average for CS. However, I didn't have much experience in hackathons or competitions, which is why I believe balance is more important than sky-high grades. I know friends with much lower averages (e.g., low 90s) but with impressive extracurriculars who got into Waterloo. For hackathons, I recommend attending hackathons like Hack the North, Hack the Valley, and Hack Western (just look at https://mlh.io/ for a list of hackathons).
 
