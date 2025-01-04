@@ -459,7 +459,7 @@ const blogPosts = [
       title: "Winter Break",
       description: "OG Fortnite. Sleep. Chill. Rediscovering the simple joys of gaming and relaxation during the much-needed winter break.",
       image: winterBreak,
-      date: "Last Updated: Dec 28, 2023",
+      date: "Last Updated: Dec 28, 2024",
       tags: ["Having", "Fun"],
       slug: "blog3",
       content: {
@@ -490,7 +490,7 @@ const blogPosts = [
     title: "First Semester of University",
     description: "Here's what to expect in Waterloo Computer Engineering 1A - the raw, unfiltered truth. From intense academics to newfound independence, this is the real first-year experience.",
     image: waterloo,
-    date: "Last Updated: Dec 28, 2023",
+    date: "Last Updated: Dec 28, 2024",
     tags: ["Uni", "Social Life"],
     slug: "blog2",
     content: {
@@ -531,7 +531,7 @@ const blogPosts = [
     title: "The Journey of Grade 12",
     description: "The year that everyone locks in. The highs, the lows, everything in between. From university applications to final exams, this is the story of the most pivotal year.",
     image: gradImg,
-    date: "Last Updated: Dec 28, 2023",
+    date: "Last Updated: Dec 28, 2024",
     tags: ["School", "Grades"],
     slug: "blog1",
     content: {
